@@ -56,13 +56,14 @@
 
 (def z (count str1))
 
-(println z)
+
 (doseq [item str1]
   (def x (count item))
   (doseq [item2 item]
     ;(println item2)
     )
   )
+(println z)
 (println x)
 (def row_val (- z 1))
 (def col_val (- x 1))
@@ -70,7 +71,15 @@
 
 (def vecVal(get (get str1 row_val) col_val))
 (println vecVal)
-;(def z (last (last str1)))
-;(println z)
-;(def revStr (rseq str1))
-;(println revStr)
+
+(def init_row (- z z))
+(def init_col (- x x))
+
+(def init_val (get (get str1 init_row) init_col))
+(println init_val)
+
+
+
+(doseq [item str1]
+  (println item)
+  )
